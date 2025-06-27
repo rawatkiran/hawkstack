@@ -9,4 +9,5 @@ To install and set up the project locally, follow these steps:
 1. Clone the repository:
    git clone https://github.com/rawatkiran/hawkstack.git
 2. Run it locally:
+   Ensure you are using Node.js version 18
    npm run dev
