@@ -1,7 +1,19 @@
+'use client';
+import Header from '../components/Header';
+
 export default function Home() {
+
+  const handleClick = () => {
+    window.open('https://www.hawkstack.com/contact-us/', '_blank');
+  };
+
   return (
-    <div className="text-center mt-10">
-      <h1 className="text-4xl font-bold mb-4">Home Page</h1>
-    </div>
+    <>
+      <Header
+        heading="HawkStack: Engineering the Future of DevOps – Smarter, Faster, Resilient"
+        buttonText="SEE WHAT WE DO"
+        onButtonClick={() => handleClick}
+      />
+    </>
   );
 }
