@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ heading, subheading, buttonText, onButtonClick }) => {
   return (
-    <div className="bg-[url('/images/home-bg.jpg')] bg-cover bg-center h-96 w-full text-start flex flex-col items-start justify-center h-[490px] p-20">
+    <div className="bg-[url('/images/home-bg.jpg')] bg-cover bg-center h-96 w-full text-start flex flex-col items-start justify-center h-[490px] p-25">
       <h1 className="text-6xl text-white">{heading}</h1>
       {subheading && <p className="mt-2 text-white-600">{subheading}</p>}
       {buttonText && onButtonClick && (
