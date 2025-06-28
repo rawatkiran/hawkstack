@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface HeaderProps {
+interface HeroProps {
   heading: string;
   subheading?: string;
   buttonText?: string;
   onButtonClick?: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ heading, subheading, buttonText, onButtonClick }) => {
+const HeroComponent: React.FC<HeroProps> = ({ heading, subheading, buttonText, onButtonClick }) => {
   return (
     <div className="bg-[url('/images/home-bg.jpg')] bg-cover bg-center h-96 w-full text-start flex flex-col items-start justify-center h-[490px] p-25">
       <h1 className="text-6xl text-white">{heading}</h1>
@@ -24,4 +24,4 @@ const Header: React.FC<HeaderProps> = ({ heading, subheading, buttonText, onButt
   );
 };
 
-export default Header;
+export default HeroComponent;

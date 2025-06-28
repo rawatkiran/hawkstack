@@ -1,5 +1,5 @@
 'use client';
-import Header from '../components/Header';
+import HeroComponent from '../components/HeroComponent';
 
 export default function Home() {
 
@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <Header
+      <HeroComponent
         heading="HawkStack: Engineering the Future of DevOps – Smarter, Faster, Resilient"
         buttonText="SEE WHAT WE DO"
         onButtonClick={() => handleClick}
