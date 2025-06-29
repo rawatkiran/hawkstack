@@ -8,12 +8,10 @@ export default function Home() {
   };
 
   return (
-    <>
       <HeroComponent
         heading="HawkStack: Engineering the Future of DevOps – Smarter, Faster, Resilient"
         buttonText="SEE WHAT WE DO"
         onButtonClick={() => handleClick}
       />
-    </>
   );
 }
