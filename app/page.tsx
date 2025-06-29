@@ -11,7 +11,8 @@ export default function Home() {
       <HeroComponent
         heading="HawkStack: Engineering the Future of DevOps – Smarter, Faster, Resilient"
         buttonText="SEE WHAT WE DO"
-        onButtonClick={() => handleClick}
+        onButtonClick={handleClick}
+        fetchPriority='high'
       />
   );
 }

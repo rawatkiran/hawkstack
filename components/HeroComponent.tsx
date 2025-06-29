@@ -6,6 +6,7 @@ interface HeroProps {
   subheading?: string;
   buttonText?: string;
   onButtonClick?: () => void;
+  fetchPriority?: 'low' | 'high' | 'auto';
 }
 
 const HeroComponent: React.FC<HeroProps> = ({
@@ -13,16 +14,19 @@ const HeroComponent: React.FC<HeroProps> = ({
   subheading,
   buttonText,
   onButtonClick,
+  fetchPriority = 'low',
 }) => {
   return (
-    <div className="relative h-[490px] w-full text-start flex flex-col items-start justify-center h-[490px] p-25">
+    <div className="relative h-[490px] w-full text-start flex flex-col items-start justify-center p-25">
       <Image
         src="/images/hero-bg.webp"
         alt="Background"
-        layout="fill"
-        fetchPriority="low"
-        objectFit="cover"
-        className="z-0"
+        fill
+        priority={fetchPriority === 'high'}
+        fetchPriority={fetchPriority}
+        sizes="100vw"
+        quality={85}
+        className="z-0 object-cover"
       />
       <div className="relative z-10">
         <h1 className="text-6xl text-white">{heading}</h1>
