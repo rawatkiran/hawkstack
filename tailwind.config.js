@@ -7,3 +7,13 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
 };
+
+// tailwind.config.ts
+export const theme = {
+  extend: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
+  },
+};
+
