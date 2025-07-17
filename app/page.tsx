@@ -2,9 +2,11 @@
 import Image from 'next/image';
 // import HeroComponent from '../components/HeroComponent';
 import ImageCard from '../components/ImageCard';
+import { WHYHAWKSTACK } from '../components/constants';
+import PartnersCarousel from '../components/PartnersCarousel';
+import Footer from '../components/Footer';
 
 export default function Home() {
-
   return (
     <>
       {/* Hero Section */}
@@ -18,7 +20,8 @@ export default function Home() {
       <section className="mt-16 px-25">
         <h2 className="text-4xl text-center mb-6">HawkStack's Approach</h2>
         <p className="text-center text-md text-gray-400">
-        HawkStack’s Approach combines engineering precision, breakthrough innovation, and deep insights to accelerate your digital journey.
+          HawkStack’s Approach combines engineering precision, breakthrough
+          innovation, and deep insights to accelerate your digital journey.
         </p>
       </section>
 
@@ -43,7 +46,7 @@ export default function Home() {
 
       {/* Expertise Section */}
       <section className="mt-16 px-25">
-        <h2 className="text-4xl text-center mb-6">Our Expertise</h2>
+        <h2 className="text-4xl text-center mb-6">HawkStack's Services</h2>
         <p className="text-center text-md text-gray-400 mb-12">
           Discover Hawkstack’s expertise in IT automation, cloud-native
           development, DevOps support, modern monitoring, and AI & Machine
@@ -141,6 +144,52 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      {/* Why Hawkstack Section */}
+      <section className="py-16 bg-white text-gray-800">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl text-center mb-6">Why Choose HawkStack?</h2>
+      </div>
+
+      <div className="relative flex flex-col lg:flex-row items-center justify-center gap-12 px-4 max-w-7xl mx-auto">
+        {/* Left Column */}
+        <div className="flex flex-col gap-8 lg:w-1/3">
+          {WHYHAWKSTACK
+            .filter((f) => f.position.includes('left'))
+            .map((item, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            ))}
+        </div>
+
+        {/* Center Image */}
+        <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+          <Image
+            src="/images/whyHawkstack.webp"
+            alt="Center Illustration"
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
+        </div>
+
+        {/* Right Column */}
+        <div className="flex flex-col gap-8 lg:w-1/3">
+          {WHYHAWKSTACK
+            .filter((f) => f.position.includes('right'))
+            .map((item, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            ))}
+        </div>
+      </div>
+    </section>
+    <PartnersCarousel />
+    <Footer />
     </>
   );
 }

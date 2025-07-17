@@ -6,14 +6,24 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-};
-
-// tailwind.config.ts
-export const theme = {
-  extend: {
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+      boxShadow: {
+        custom: '-1.216px 6.894px 25px 0 rgba(0, 0, 0, 0.07)',
+      },
     },
   },
 };
+
+// tailwind.config.ts
+// export const theme = {
+//   extend: {
+//     fontFamily: {
+//       sans: ['Inter', 'sans-serif'],
+//     },
+//   },
+// };
 
