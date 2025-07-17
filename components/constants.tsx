@@ -11,52 +11,35 @@ export type Item = {
 
 export const SOLUTION_FEATURES: Feature[] = [
   {
-    title: 'VMware Alternative',
+    title: 'Cloud Native',
     description:
       'Migrate to a modern, future-proof, high-performance cloud platform with cost-effective licensing',
     //     icon: <SiVmware className="text-indigo-400 text-2xl" />,
   },
   {
-    title: 'Multi-Cloud',
+    title: 'Infrastruture Services',
     description:
       'Build, deploy, manage and host apps on any infrastructure anywhere, with DevOps integration',
     //     icon: <FaCloud className="text-indigo-400 text-2xl" />,
   },
   {
-    title: 'High-Performance Storage',
+    title: 'IT Automation',
     description:
       'Get fast, scalable, cost-efficient storage with the best price-performance',
     //     icon: <MdStorage className="text-indigo-400 text-2xl" />,
   },
   {
-    title: 'Platform as a Service',
+    title: 'DevSecOps',
     description:
       'Host, build, deploy, modernize & manage apps in efficient elastic cloud with DevOps integration',
     //     icon: <BsCpu className="text-indigo-400 text-2xl" />,
   },
   {
-    title: 'Database Management',
+    title: 'Training & Certification',
     description:
       'Simplify database infrastructure, automate management, move to database as a service',
     //     icon: <FaDatabase className="text-indigo-400 text-2xl" />,
-  },
-  {
-    title: 'Kubernetes',
-    description:
-      'Simplify Kubernetes with optimized clustering, hosting and management',
-    //     icon: <SiKubernetes className="text-indigo-400 text-2xl" />,
-  },
-  {
-    title: 'WordPress',
-    description:
-      'Make WordPress faster, more scalable, more resilient, and integrate with DevOps',
-    //     icon: <FaWordpress className="text-indigo-400 text-2xl" />,
-  },
-  {
-    title: 'Application Marketplace',
-    description: 'One-click installable applications, services and add-ons',
-    //     icon: <FaStore className="text-indigo-400 text-2xl" />,
-  },
+  }
 ];
 
 export const INDUSTRY_FEATURES: Feature[] = [
@@ -121,3 +104,31 @@ export const COMPANY: Item[] = [
     name: 'Contact Us',
   }
 ]
+
+
+export const WHYHAWKSTACK = [
+  {
+    title: 'Integrated Excellence',
+    description:
+      'Our integrated approach ensures synergy across diverse technology domains empowering comprehensive organizational advancement.',
+    position: 'top-left',
+  },
+  {
+    title: 'Innovate with Confidence',
+    description:
+      'With a culture of continuous improvement and forward-looking strategies, HawkStack\'s commitment to innovation is unparalleled.',
+    position: 'top-right',
+  },
+  {
+    title: 'End-to-End Empowerment',
+    description:
+      'From IT Automation to Training & Certification, HawkStack empowers clients with comprehensive solutions to empower your business.',
+    position: 'bottom-left',
+  },
+  {
+    title: 'Strategic Foresight',
+    description:
+      'Stay ahead of the digital wave with HawkStack\'s foresight-driven, strategic solutions and grow your business.',
+    position: 'bottom-right',
+  },
+];
