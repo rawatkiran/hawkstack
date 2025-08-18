@@ -5,6 +5,7 @@ import ImageCard from '../components/ImageCard';
 import { WHYHAWKSTACK } from '../components/constants';
 import PartnersCarousel from '../components/PartnersCarousel';
 import Footer from '../components/Footer';
+import 'keen-slider/keen-slider.min.css';
 
 export default function Home() {
   return (

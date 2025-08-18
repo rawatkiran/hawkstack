@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '../components/Navbar';
+import 'keen-slider/keen-slider.min.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
