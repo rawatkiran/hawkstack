@@ -9,6 +9,19 @@ export default function Modal({ items }: { items: Item[] }) {
     return null; // Ensure the router is mounted before rendering
   }
 
+  const handleNavigation = (item: Item) => {
+    console.log(`Navigating to ${item.name}`);
+    if(item.name === "Overview"){
+      router.push('/overview');
+    }
+    else if(item.name === "Careers"){
+      router.push('/careers');
+    }
+    else if(item.name === "Contact Us"){
+      router.push('/contact');
+    }
+  }
+
   return (
     <div className="flex w-[700px] bg-white shadow-xl rounded-[2rem] overflow-hidden">
       {/* Left links */}
@@ -16,7 +29,7 @@ export default function Modal({ items }: { items: Item[] }) {
         {items?.map((item, idx) => (
           <div
             key={idx}
-            onClick={() => router.push('/contact')} // Navigate to /contact-us on click
+            onClick={() => handleNavigation(item)} // Navigate to /contact-us on click
             className="text-black text-lg px-4 py-3 rounded-xl cursor-pointer hover:bg-[#f1f5ff] transition-colors"
           >
             {item.name}
