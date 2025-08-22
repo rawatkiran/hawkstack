@@ -34,7 +34,6 @@ export default function FounderCarousel() {
     {
       loop: true,
       slides: { perView: 1 },
-      duration: 1000,
       slideChanged(slider) {
         setCurrentSlide(slider.track.details.rel);
       },
