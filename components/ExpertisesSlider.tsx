@@ -88,7 +88,7 @@ export default function ExpertiseSlider() {
             <button
               key={idx}
               onClick={() => instanceRef.current?.moveToIdx(idx)}
-              className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              className={`w-3 h-3 rounded-full transition-colors cursor-pointer duration-300 ${
                 currentSlide === idx ? 'bg-blue-600' : 'bg-gray-300'
               }`}
             />

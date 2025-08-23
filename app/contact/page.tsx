@@ -11,6 +11,8 @@ import {
 import Link from 'next/link';
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,10 +27,26 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus("");
     // handle form submission here
-    console.log(formData);
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      setStatus("✅ Message saved successfully!");
+    } else {
+      setStatus("❌ Failed to send message. Try again.");
+    }
+    setLoading(false);
+    console.log(formData, "FORM DATA");
   };
 
   return (
@@ -206,7 +224,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-30 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition"
+              className="w-30 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition cursor-pointer"
             >
               Submit
             </button>

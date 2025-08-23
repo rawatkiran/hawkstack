@@ -94,7 +94,7 @@ export default function FounderCarousel() {
           <button
             key={idx}
             onClick={() => instanceRef.current?.moveToIdx(idx)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
               currentSlide === idx ? 'bg-indigo-600' : 'bg-gray-300'
             }`}
           />
