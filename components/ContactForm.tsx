@@ -104,7 +104,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="w-full py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
+          className="w-full py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition cursor-pointer"
         >
           Send Now
         </button>

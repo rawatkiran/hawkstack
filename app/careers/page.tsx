@@ -104,7 +104,7 @@ export default function CareersTabs() {
               Discover a workplace that empowers you to learn, grow, and excel
               in your own unique way.
             </p>
-            <button className="px-6 py-3 bg-[#478966] hover:bg-green-700 rounded-full text-lg font-medium transition">
+            <button className="px-6 py-3 bg-[#478966] hover:bg-green-700 rounded-full text-lg font-medium transition cursor-pointer">
               Explore career opportunities →
             </button>
           </div>
@@ -127,7 +127,7 @@ export default function CareersTabs() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition shadow-sm ${
+              className={`px-6 py-3 rounded-lg font-medium transition cursor-pointer shadow-sm ${
                 activeTab === tab.id
                   ? "bg-blue-500 text-white shadow-md"
                   : "bg-blue-200 text-gray-800 hover:bg-blue-300"

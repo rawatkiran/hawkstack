@@ -224,7 +224,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-30 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition"
+              className="w-30 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition cursor-pointer"
             >
               Submit
             </button>

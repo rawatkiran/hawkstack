@@ -75,7 +75,7 @@ export default function OverviewPage() {
             <div key={value.title}>
               <button
                 onClick={() => setActiveIndex(index)}
-                className="w-full text-left px-6 py-4 focus:outline-none"
+                className="w-full text-left px-6 py-4 focus:outline-none cursor-pointer"
               >
                 <h3
                   className={`text-lg font-medium ${
@@ -154,7 +154,7 @@ export default function OverviewPage() {
             />
             <button
               type="submit"
-              className="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition w-fit"
+              className="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition w-fit cursor-pointer"
             >
               Submit Form
             </button>

@@ -1,12 +1,12 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import FeatureGrid from './FeatureGrid';
 import Modal from './Modal';
 import { COMPANY, PARTNERS, SOLUTION_FEATURES } from './constants';
 import Link from 'next/link';
-
 
 export default function Navbar() {
   const [showIndustriesModal, setShowIndustriesModal] = useState(false);
@@ -18,6 +18,7 @@ export default function Navbar() {
   const solutionsRef = useRef<HTMLLIElement | null>(null);
   const companyRef = useRef<HTMLLIElement | null>(null);
   const partnerRef = useRef<HTMLLIElement | null>(null);
+  const router = useRouter();
 
   const handleEnter = () => {
     if (productsRef.current) {
@@ -91,8 +92,8 @@ export default function Navbar() {
         {/* Logo */}
         {/* <div className="text-2xl font-semibold text-black">HawkStack</div> */}
         <Image
-          src={"/images/logo.webp"}
-          alt={"HawkStack Logo"}
+          src={'/images/logo.webp'}
+          alt={'HawkStack Logo'}
           width={165}
           height={55}
         />
@@ -117,7 +118,7 @@ export default function Navbar() {
               </div>
             )}
           </li> */}
-           <li className="cursor-pointer hover:text-black">
+          <li className="cursor-pointer hover:text-black">
             <Link href="/">Home</Link>
           </li>
           {/* <li className="cursor-pointer hover:text-black">
@@ -142,14 +143,16 @@ export default function Navbar() {
             )}
           </li>
           <li className="cursor-pointer hover:text-black">
-            <Link href="https://training.hawkstack.com/" target='_blank'>Trainings & Certifications </Link>
+            <Link href="https://training.hawkstack.com/" target="_blank">
+              Trainings & Certifications{' '}
+            </Link>
           </li>
           <li
-           ref={partnerRef}
-           className="cursor-pointer hover:text-black relative"
-           onMouseEnter={handlePartnerEnter}
-          //  onMouseLeave={handlePartnerLeave}
-           onClick={() => setShowPartnerModal(!showPartnerModal)}
+            ref={partnerRef}
+            className="cursor-pointer hover:text-black relative"
+            onMouseEnter={handlePartnerEnter}
+            //  onMouseLeave={handlePartnerLeave}
+            onClick={() => setShowPartnerModal(!showPartnerModal)}
           >
             Partners
             {showPartnerModal && (
@@ -158,16 +161,16 @@ export default function Navbar() {
                 onMouseEnter={handlePartnerEnter}
                 onMouseLeave={handlePartnerLeave}
               >
-                <Modal items={PARTNERS}/>
+                <Modal items={PARTNERS} />
               </div>
             )}
           </li>
           <li
-           ref={companyRef}
-           className="cursor-pointer hover:text-black relative"
-           onMouseEnter={handleCompanyEnter}
-          //  onMouseLeave={handleCompanyLeave}
-           onClick={() => setShowCompanyModal(!showCompanyModal)}
+            ref={companyRef}
+            className="cursor-pointer hover:text-black relative"
+            onMouseEnter={handleCompanyEnter}
+            //  onMouseLeave={handleCompanyLeave}
+            onClick={() => setShowCompanyModal(!showCompanyModal)}
           >
             Company
             {showCompanyModal && (
@@ -176,7 +179,7 @@ export default function Navbar() {
                 onMouseEnter={handleCompanyEnter}
                 onMouseLeave={handleCompanyLeave}
               >
-                <Modal items={COMPANY}/>
+                <Modal items={COMPANY} />
               </div>
             )}
           </li>
@@ -185,7 +188,10 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="flex items-center gap-4">
           <div className="text-gray-600 text-sm cursor-pointer" />
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-blue-800 transition">
+          <button
+            className="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-blue-800 transition cursor-pointer"
+            onClick={() => router.push('/contact')}
+          >
             GET IN TOUCH
           </button>
         </div>
